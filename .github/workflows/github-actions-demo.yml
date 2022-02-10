@@ -16,4 +16,4 @@ jobs:
           ls ${{ github.workspace }}
       - run: echo "🍏 This job's status is ${{ job.status }}."
       - name: Build with Maven
-      - run: mvn test --file pom.xml
+        run: mvn test --file pom.xml
