@@ -15,3 +15,8 @@ jobs:
         run: |
           ls ${{ github.workspace }}
       - run: echo "🍏 This job's status is ${{ job.status }}."
+      - name: Build with Maven
+        env: 
+         SAUCE_USERNAME: ${{ secrets.SAUCE_USERNAME }}
+         SAUCE_ACCESS_KEY: ${{ secrets.SAUCE_ACCESS_KEY }}
+        run: mvn test --file pom.xml
